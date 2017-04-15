@@ -14,11 +14,17 @@
 <input type="radio" class="attr sheetoptions pages page3" name="attr_pagenumber" title="Page3" value="3" />
 <span class="sheet-attr">Page 3</span>
 
+<input type="radio" class="attr sheetoptions pages page4" name="attr_pagenumber" title="Page4" value="4" />
+<span class="sheet-attr">Page 4</span>
+
 <br><div class="settings-spacer" style="height: 40px; display: none;"></div>
 
 <br><br><span class="gametype edition">2nd Edition</span><br>
 
-<input type="radio" class="attr sheetoptions gametype vampiresheet 2nd" name="attr_sheettype" title="Vampire" value="vampire2" style="width: 148px;"/>
+<input type="radio" class="attr sheetoptions gametype mortalsheet 2nd" name="attr_sheettype" title="Mortal" value="mortal2" style="width: 136px;"/>
+<span class="sheet-attr" style="margin-left: -140px;">World of Darkness</span>
+
+<input type="radio" class="attr sheetoptions gametype vampiresheet 2nd" name="attr_sheettype" title="Vampire" value="vampire2" checked="checked" style="width: 148px;"/>
 <span class="sheet-attr" style="margin-left: -152px;">Vampire the Requiem</span>
 
 <br><span class="spacer"></span><br><span class="spacer"></span><br>
@@ -115,6 +121,8 @@
     <span>Fast Reflexes: </span><input type="number" name="attr_fast_reflexes" value="0" />
 </div>    
 
+<div class="el_spacer" style="height: 30px;"></div>
+
 <!-- CHARACTER INFO FIELDS -->
 <div class="3colrow">
     <table>
@@ -209,8 +217,6 @@
         </tbody>
     </table>
 </div>
-
-<div class="el_spacer"></div>
 
 <!-- ATTRIBUTE FIELDS -->
 <div class="sheet-3colrow attributes">
@@ -311,10 +317,13 @@
 <div class="skills">
     <table>
         <tbody>
-            <tr>
+            <tr> 
                 <th colspan="2">
                     SKILLS
                 </th>
+            </tr>
+            <tr>
+                <td class="el_spacer" style="height: 10px;"></td>
             </tr>
             <tr>
                 <td class="subheader" colspan="2">
@@ -399,6 +408,9 @@
                 </td>
             </tr>
             <tr>
+                <td class="el_spacer" style="height: 10px;"></td>
+            </tr>
+            <tr>
                 <td class="subheader" colspan="2">
                     Physical
                 </td>
@@ -479,6 +491,9 @@
                 <td>
                     <input type="radio" class="sheet-normal sheet-zero" name="attr_Weaponry" value="-1" checked="checked" /><span></span><input type="radio" class="sheet-normal" name="attr_Weaponry" value="1" /><span></span><input type="radio" class="sheet-normal" name="attr_Weaponry" value="2" /><span></span><input type="radio" class="sheet-normal" name="attr_Weaponry" value="3" /><span></span><input type="radio" class="sheet-normal" name="attr_Weaponry" value="4" /><span></span><input type="radio" class="sheet-normal" name="attr_Weaponry" value="5" /><span></span>
                 </td>
+            </tr>
+            <tr>
+                <td class="el_spacer" style="height: 10px;"></td>
             </tr>
             <tr>
                 <td class="subheader" colspan="2">
@@ -570,11 +585,6 @@
     <table class="merits">
         <tbody>
             <tr>
-                <th colspan="2">
-                    OTHER TRAITS
-                </th>
-            </tr>
-            <tr>
                 <td>
                     <table class="merittable">
                         <tr>
@@ -636,28 +646,52 @@
                                         <td><input type="radio" class="sheet-normal sheet-zero" name="attr_merit10" value="0" checked="checked" /><span></span><input type="radio" class="sheet-normal" name="attr_merit10" value="1" /><span></span><input type="radio" class="sheet-normal" name="attr_merit10" value="2" /><span></span><input type="radio" class="sheet-normal" name="attr_merit10" value="3" /><span></span><input type="radio" class="sheet-normal" name="attr_merit10" value="4" /><span></span><input type="radio" class="sheet-normal" name="attr_merit10" value="5" /><span></span></td>
                                     </tr>
                                     <tr>
-                                        <td class="el_spacer"></td>
+                                        <td><input type="text" name="attr_merit11_name" /></td>
+                                        <td><input type="radio" class="sheet-normal sheet-zero" name="attr_merit11" value="0" checked="checked" /><span></span><input type="radio" class="sheet-normal" name="attr_merit11" value="1" /><span></span><input type="radio" class="sheet-normal" name="attr_merit11" value="2" /><span></span><input type="radio" class="sheet-normal" name="attr_merit11" value="3" /><span></span><input type="radio" class="sheet-normal" name="attr_merit11" value="4" /><span></span><input type="radio" class="sheet-normal" name="attr_merit11" value="5" /><span></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="attr_merit12_name" /></td>
+                                        <td><input type="radio" class="sheet-normal sheet-zero" name="attr_merit12" value="0" checked="checked" /><span></span><input type="radio" class="sheet-normal" name="attr_merit12" value="1" /><span></span><input type="radio" class="sheet-normal" name="attr_merit12" value="2" /><span></span><input type="radio" class="sheet-normal" name="attr_merit12" value="3" /><span></span><input type="radio" class="sheet-normal" name="attr_merit12" value="4" /><span></span><input type="radio" class="sheet-normal" name="attr_merit12" value="5" /><span></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="attr_merit13_name" /></td>
+                                        <td><input type="radio" class="sheet-normal sheet-zero" name="attr_merit13" value="0" checked="checked" /><span></span><input type="radio" class="sheet-normal" name="attr_merit13" value="1" /><span></span><input type="radio" class="sheet-normal" name="attr_merit13" value="2" /><span></span><input type="radio" class="sheet-normal" name="attr_merit13" value="3" /><span></span><input type="radio" class="sheet-normal" name="attr_merit13" value="4" /><span></span><input type="radio" class="sheet-normal" name="attr_merit13" value="5" /><span></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="attr_merit14_name" /></td>
+                                        <td><input type="radio" class="sheet-normal sheet-zero" name="attr_merit14" value="0" checked="checked" /><span></span><input type="radio" class="sheet-normal" name="attr_merit14" value="1" /><span></span><input type="radio" class="sheet-normal" name="attr_merit14" value="2" /><span></span><input type="radio" class="sheet-normal" name="attr_merit14" value="3" /><span></span><input type="radio" class="sheet-normal" name="attr_merit14" value="4" /><span></span><input type="radio" class="sheet-normal" name="attr_merit14" value="5" /><span></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="attr_merit15_name" /></td>
+                                        <td><input type="radio" class="sheet-normal sheet-zero" name="attr_merit15" value="0" checked="checked" /><span></span><input type="radio" class="sheet-normal" name="attr_merit15" value="1" /><span></span><input type="radio" class="sheet-normal" name="attr_merit15" value="2" /><span></span><input type="radio" class="sheet-normal" name="attr_merit15" value="3" /><span></span><input type="radio" class="sheet-normal" name="attr_merit15" value="4" /><span></span><input type="radio" class="sheet-normal" name="attr_merit15" value="5" /><span></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="attr_merit16_name" /></td>
+                                        <td><input type="radio" class="sheet-normal sheet-zero" name="attr_merit16" value="0" checked="checked" /><span></span><input type="radio" class="sheet-normal" name="attr_merit16" value="1" /><span></span><input type="radio" class="sheet-normal" name="attr_merit16" value="2" /><span></span><input type="radio" class="sheet-normal" name="attr_merit16" value="3" /><span></span><input type="radio" class="sheet-normal" name="attr_merit16" value="4" /><span></span><input type="radio" class="sheet-normal" name="attr_merit16" value="5" /><span></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="el_spacer" style="height: 5px;"></td>
                                     </tr>
                                 </table>
-                                <table class="specializations">
+                                <table class="specializationtable">
                                     <tr>
                                         <td class="subheader">
                                             Specializations
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="rowtext"><input type="text" name="attr_specializations1" /></td>
+                                        <td class="rowtext" ><input type="text" style="width: 222px;" name="attr_specializations1" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="rowtext"><input type="text" name="attr_specializations2" /></td>
+                                        <td class="rowtext" colspan="2"><input type="text" style="width: 222px;" name="attr_specializations2" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="rowtext"><input type="text" name="attr_specializations3" /></td>
+                                        <td class="rowtext" colspan="2"><input type="text" style="width: 222px;" name="attr_specializations3" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="rowtext"><input type="text" name="attr_specializations4" /></td>
+                                        <td class="rowtext" colspan="2"><input type="text" style="width: 222px;" name="attr_specializations4" /></td>
                                     </tr>
-                                </table>
+                                </table>                                
                             </td>
                             <td>
                                 <table class="othertrait mortal werewolf promethean changeling geist mummy">
@@ -724,6 +758,30 @@
                                     <tr>
                                         <td><input type="text" name="attr_othertrait16_name" /></td>
                                         <td><input type="radio" class="sheet-normal sheet-zero" name="attr_othertrait16" value="0" checked="checked" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait16" value="1" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait16" value="2" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait16" value="3" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait16" value="4" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait16" value="5" /><span></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="attr_othertrait17_name" /></td>
+                                        <td><input type="radio" class="sheet-normal sheet-zero" name="attr_othertrait17" value="0" checked="checked" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait17" value="1" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait17" value="2" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait17" value="3" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait17" value="4" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait17" value="5" /><span></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="attr_othertrait18_name" /></td>
+                                        <td><input type="radio" class="sheet-normal sheet-zero" name="attr_othertrait18" value="0" checked="checked" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait18" value="1" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait18" value="2" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait18" value="3" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait18" value="4" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait18" value="5" /><span></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="attr_othertrait19_name" /></td>
+                                        <td><input type="radio" class="sheet-normal sheet-zero" name="attr_othertrait19" value="0" checked="checked" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait19" value="1" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait19" value="2" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait19" value="3" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait19" value="4" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait19" value="5" /><span></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="attr_othertrait20_name" /></td>
+                                        <td><input type="radio" class="sheet-normal sheet-zero" name="attr_othertrait20" value="0" checked="checked" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait20" value="1" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait20" value="2" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait20" value="3" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait20" value="4" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait20" value="5" /><span></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="attr_othertrait21_name" /></td>
+                                        <td><input type="radio" class="sheet-normal sheet-zero" name="attr_othertrait21" value="0" checked="checked" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait21" value="1" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait21" value="2" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait21" value="3" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait21" value="4" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait21" value="5" /><span></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="attr_othertrait22_name" /></td>
+                                        <td><input type="radio" class="sheet-normal sheet-zero" name="attr_othertrait22" value="0" checked="checked" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait22" value="1" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait22" value="2" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait22" value="3" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait22" value="4" /><span></span><input type="radio" class="sheet-normal" name="attr_othertrait22" value="5" /><span></span></td>
                                     </tr>
                                 </table>
                                 <table class="disciplines vampire">
@@ -850,6 +908,28 @@
                                     <tr>
                                         <td><input type="text" name="attr_discipline4_name" /></td>
                                         <td><input type="radio" class="sheet-normal sheet-zero" name="attr_discipline4" value="0" checked="checked" /><span></span><input type="radio" class="sheet-normal" name="attr_discipline4" value="1" /><span></span><input type="radio" class="sheet-normal" name="attr_discipline4" value="2" /><span></span><input type="radio" class="sheet-normal" name="attr_discipline4" value="3" /><span></span><input type="radio" class="sheet-normal" name="attr_discipline4" value="4" /><span></span><input type="radio" class="sheet-normal" name="attr_discipline4" value="5" /><span></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="el_spacer" style="height: 11px;"></td>
+                                    </tr>
+                                </table>
+                                <table class="vampire specializationtable">
+                                    <tr>
+                                        <td class="subheader">
+                                            Conditions
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="rowtext" ><input type="text" style="width: 222px;" name="attr_conditions1" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="rowtext"><input type="text" style="width: 222px;" name="attr_conditions2" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="rowtext"><input type="text" style="width: 222px;" name="attr_conditions3" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="rowtext"><input type="text" style="width: 222px;" name="attr_conditions4" /></td>
                                     </tr>
                                 </table>
                                 <table class="arcanas mage">
@@ -1164,7 +1244,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="spacer"></td>
+                            <td class="spacer" style="height: 30px;"></td>
                         </tr>
                         <tr>
                             <td class="subheader">
@@ -1178,7 +1258,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="spacer"></td>
+                            <td class="spacer" style="height: 30px;"></td>
                         </tr>
                         <tr>
                             <td class="subheader">
@@ -1194,36 +1274,40 @@
                         </tr>
                         <tr>
                             <td style="text-align: center;">
-                                <table class="vampire">
+                                <table>
                                     <tr>
-                                        <td style="text-align: left;">
-                                            <input type="radio" class="sheet-normal" name="attr_morality" value="1" /><span></span><br />
-                                            <input type="radio" class="sheet-normal" name="attr_morality" value="2" /><span></span><br />
-                                            <input type="radio" class="sheet-normal" name="attr_morality" value="3" /><span></span><br />
-                                            <input type="radio" class="sheet-normal" name="attr_morality" value="4" /><span></span><br />
-                                            <input type="radio" class="sheet-normal" name="attr_morality" value="5" /><span></span><br />
-                                            <input type="radio" class="sheet-normal" name="attr_morality" value="6" /><span></span><br />
-                                            <input type="radio" class="sheet-normal" name="attr_morality" value="7" checked="checked" /><span></span><br />
-                                            <input type="radio" class="sheet-normal" name="attr_morality" value="8" /><span></span><br />
-                                            <input type="radio" class="sheet-normal" name="attr_morality" value="9" /><span></span><br />
-                                            <input type="radio" class="sheet-normal" name="attr_morality" value="10" /><span></span><br />
+                                        <td class="sheet-humanity" style="text-align: left;">
+                                            <input type="radio" class="sheet-humanity" name="attr_morality" value="10" /><span></span><br />
+                                            <input type="radio" class="sheet-humanity" name="attr_morality" value="9" /><span></span><br />
+                                            <input type="radio" class="sheet-humanity" name="attr_morality" value="8" /><span></span><br />
+                                            <input type="radio" class="sheet-humanity" name="attr_morality" value="7" checked="checked" /><span></span><br />
+                                            <input type="radio" class="sheet-humanity" name="attr_morality" value="6" /><span></span><br />
+                                            <input type="radio" class="sheet-humanity" name="attr_morality" value="5" /><span></span><br />
+                                            <input type="radio" class="sheet-humanity" name="attr_morality" value="4" /><span></span><br />
+                                            <input type="radio" class="sheet-humanity" name="attr_morality" value="3" /><span></span><br />
+                                            <input type="radio" class="sheet-humanity" name="attr_morality" value="2" /><span></span><br />
+                                            <input type="radio" class="sheet-humanity" name="attr_morality" value="1" /><span></span>
                                         </td>
                                         <td class="humanitytext">
-                                            <input type="text" name="attr_touchstone1" /><br/>
-                                            <input type="text" name="attr_touchstone2" /><br/>
-                                            <input type="text" name="attr_touchstone3" /><br/>
-                                            <input type="text" name="attr_touchstone4" /><br/>
-                                            <input type="text" name="attr_touchstone5" /><br/>
-                                            <input type="text" name="attr_touchstone6" /><br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
                                             <input type="text" name="attr_touchstone7" /><br/>
+                                            <input type="text" name="attr_touchstone6" /><br/>
+                                            <input type="text" name="attr_touchstone5" /><br/>
+                                            <input type="text" name="attr_touchstone4" /><br/>
+                                            <input type="text" name="attr_touchstone3" /><br/>
+                                            <input type="text" name="attr_touchstone2" /><br/>
+                                            <input type="text" name="attr_touchstone1" />
                                         </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="spacer" style="height: 30px;"></td>
                                     </tr>
                                 </table>
                             </td>
                         </tr>
-                        <tr>
-                            <td class="el_spacer"></td>
-                        </tr>
+
                         <tr>
                             <td>
                                 <table class="mortal">
@@ -1295,6 +1379,9 @@
                                                 <span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box21"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box22"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box23"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box24"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box25"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box26"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box27"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box28"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box29"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box30"><span></span></span></span>
                                             </div>
                                         </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="el_spacer"></td>
                                     </tr>
                                 </table>
                             </td>
@@ -1405,12 +1492,7 @@
             <textarea rows="2" cols="40" name="attr_fame"></textarea>
         </div>
         <br>
-        <div class="sheet-customroll">
-            <span class="subheader">Banes</span><br>
-            <textarea rows="2" cols="40" name="attr_banes"></textarea>
-        </div>
-        <br>
-        <div class="sheet-customroll">
+                <div class="sheet-customroll">
             <span class="subheader">Gear(Carried)</span><br>
             <textarea rows="2" cols="40" name="attr_gear"></textarea>
         </div>
@@ -1420,6 +1502,322 @@
             <textarea rows="2" cols="40" name="attr_vehicles"></textarea>
         </div>
         <br>
+        <div class="sheet-customroll">
+            <span class="subheader">Banes</span><br>
+            <textarea rows="2" cols="40" name="attr_banes"></textarea>
+        </div>
+        <br>
+
+        <div class="vampire">
+            <div class="sheet-customroll">
+                <span class="subheader">Herd</span><br>
+                <textarea rows="2" cols="40" name="attr_herd"></textarea>
+            </div>
+            <br>
+            <div class="sheet-customroll">
+                <span class="subheader">Rites/Miracles</span><br>
+                <textarea rows="2" cols="40" name="attr_rites"></textarea>
+            </div>
+            <br>
+        </div>
+        <div class="werewolf">
+            <div class="sheet-customroll">
+                <span class="subheader">Fetishes</span><br>
+                <textarea rows="2" cols="40" name="attr_fetishes"></textarea>
+            </div>
+            <br>
+        </div>
+        <div class="mage">
+            <div class="sheet-customroll">
+                <span class="subheader">Active Spells</span><br>
+                <textarea rows="2" cols="40" name="attr_activespells"></textarea>
+            </div>
+            <br>
+            <div class="sheet-customroll">
+                <span class="subheader">Nimbus</span><br>
+                <textarea rows="2" cols="40" name="attr_nimbus"></textarea>
+            </div>
+            <br>
+            <div class="sheet-customroll">
+                <span class="subheader">Dedicated Magical Tools</span><br>
+                <textarea rows="2" cols="40" name="attr_dedicatedmagicaltools"></textarea>
+            </div>
+            <br>
+            <div class="sheet-customroll">
+                <span class="subheader">Familiar</span><br>
+                <textarea rows="2" cols="40" name="attr_familiar"></textarea>
+            </div>
+            <br>
+        </div>
+        <div class="promethean">
+            <div class="sheet-customroll">
+                <span class="subheader">Bestowment</span><br>
+                <textarea rows="2" cols="40" name="attr_bestowment"></textarea>
+            </div>
+            <br>
+            <div class="sheet-customroll">
+                <span class="subheader">Trait Affinities</span><br>
+                <textarea rows="2" cols="40" name="attr_traitaffinities"></textarea>
+            </div>
+            <br>
+            <div class="sheet-customroll">
+                <span class="subheader">Promethean Boon</span><br>
+                <textarea rows="2" cols="40" name="attr_prometheanboon"></textarea>
+            </div>
+            <br>
+            <div class="sheet-customroll">
+                <span class="subheader">Repute</span><br>
+                <textarea rows="2" cols="40" name="attr_repute"></textarea>
+            </div>
+            <br>
+        </div>
+        <div class="changeling">
+            <div class="sheet-customroll">
+                <span class="subheader">Entitlement</span><br>
+                <textarea rows="2" cols="40" name="attr_entitlement"></textarea>
+            </div>
+            <br>
+            <div class="sheet-customroll">
+                <span class="subheader">Seeming Blessing</span><br>
+                <textarea rows="2" cols="40" name="attr_seemingblessing"></textarea>
+            </div>
+            <br>
+            <div class="sheet-customroll">
+                <span class="subheader">Goblin Contracts</span><br>
+                <textarea rows="2" cols="40" name="attr_goblincontract"></textarea>
+            </div>
+            <br>
+            <div class="sheet-customroll">
+                <span class="subheader">Harvest</span><br>
+                <textarea rows="2" cols="40" name="attr_harvest"></textarea>
+            </div>
+            <br>
+        </div>
+        <div class="geist">
+            <div class="sheet-customroll">
+                <span class="subheader">Keystone Memento</span><br>
+                <textarea rows="2" cols="40" name="attr_ketystonemomento"></textarea>
+            </div>
+            <br>
+            <div class="sheet-customroll">
+                <span class="subheader">Mementos</span><br>
+                <textarea rows="2" cols="40" name="attr_mementos"></textarea>
+            </div>
+            <br>
+        </div>
+        <div class="mummy">
+            <div class="sheet-customroll">
+                <span class="subheader">Affinities</span><br>
+                <textarea rows="2" cols="40" name="attr_affinities"></textarea>
+            </div>
+            <br>
+            <div class="sheet-customroll">
+                <span class="subheader">Cult</span><br>
+                <textarea rows="2" cols="40" name="attr_cukt"></textarea>
+            </div>
+            <br>
+            <div class="sheet-customroll">
+                <span class="subheader">Status</span><br>
+                <textarea rows="2" cols="40" name="attr_status"></textarea>
+            </div>
+            <br>
+        </div>
+        <fieldset class="repeating_infoleft">
+            <div class="sheet-customroll">
+                <input type="text" class="title" name="attr_titleleft"/><br>
+                <textarea rows="2" cols="40" name="attr_textleft"></textarea>
+            </div>
+            <br>
+        </fieldset>
+    </div>
+    
+    <div class="rightcolumn">
+        <div class="sheet-customroll">
+            <span class="subheader">Mentor</span><br>
+            <textarea rows="2" cols="40" name="attr_mentor"></textarea>
+        </div>
+        <br>
+        <div class="sheet-customroll">
+            <span class="subheader">Resources</span><br>
+            <textarea rows="2" cols="40" name="attr_resources"></textarea>
+        </div>
+        <br>
+        <div class="sheet-customroll">
+            <span class="subheader">Retainer</span><br>
+            <textarea rows="2" cols="40" name="attr_retainer"></textarea>
+        </div>
+        <br>
+        <div class="sheet-customroll">
+            <span class="subheader">Equipment(Owned)</span><br>
+            <textarea rows="2" cols="40" name="attr_equipment"></textarea>
+        </div>
+        <br>
+        <div class="sheet-customroll">
+            <span class="subheader mortal">Residence</span>
+            <span class="subheader vampire">Haven</span>
+            <span class="subheader werewolf">Totem</span>
+            <span class="subheader mage">Sanctum</span>
+            <span class="subheader mummy">Tomb</span>
+            <span class="subheader promethean">Lair</span>
+            <span class="subheader changeling">Hollow</span>
+            <span class="subheader geist">Haunt</span>
+            <br>
+            <textarea rows="2" cols="40" name="attr_residence"></textarea>
+        </div>
+        <br>
+        <div class="sheet-customroll">
+            <span class="subheader">Derangements</span><br>
+            <textarea rows="2" cols="40" name="attr_derangments"></textarea>
+        </div>
+        <br>
+        <div class="vampire">
+            <div class="sheet-customroll">
+                <span class="subheader">Status</span><br>
+                <textarea rows="2" cols="40" name="attr_status"></textarea>
+            </div>
+            <br>
+            <div class="sheet-customroll">
+                <span class="subheader">Viniculum</span><br>
+                <textarea rows="2" cols="40" name="attr_viniculum"></textarea>
+            </div>
+            <br>
+        </div>
+        <div class="werewolf">
+            <div class="sheet-customroll">
+                <span class="subheader">Status</span><br>
+                <textarea rows="2" cols="40" name="attr_status"></textarea>
+            </div>
+            <br>
+        </div>
+        <div class="mage">
+            <div class="sheet-customroll">
+                <span class="subheader">Spells Cast Upon Self</span><br>
+                <textarea rows="2" cols="40" name="attr_spellscastuponself"></textarea>
+            </div>
+            <br>
+            <div class="sheet-customroll">
+                <span class="subheader">Paradox Marks</span><br>
+                <textarea rows="2" cols="40" name="attr_paradoxmarks"></textarea>
+            </div>
+            <br>
+            <div class="sheet-customroll">
+                <span class="subheader">Enchated Items</span><br>
+                <textarea rows="2" cols="40" name="attr_enchanteditems"></textarea>
+            </div>
+            <br>
+            <div class="sheet-customroll">
+                <span class="subheader">Thrall</span><br>
+                <textarea rows="2" cols="40" name="attr_thrall"></textarea>
+            </div>
+            <br>
+        </div>
+        <div class="promethean">
+            <div class="sheet-customroll">
+                <span class="subheader">Disfigurements</span><br>
+                <textarea rows="2" cols="40" name="attr_disfigurements"></textarea>
+            </div>
+            <br>
+            <div class="sheet-customroll">
+                <span class="subheader">Language</span><br>
+                <textarea rows="2" cols="40" name="attr_language"></textarea>
+            </div>
+            <br>
+            <div class="sheet-customroll">
+                <span class="subheader">Redeemed Boon</span><br>
+                <textarea rows="2" cols="40" name="attr_redeemedboon"></textarea>
+            </div>
+            <br>
+            <div class="sheet-customroll">
+                <span class="subheader">Residual Memory</span><br>
+                <textarea rows="2" cols="40" name="attr_residualmemory"></textarea>
+            </div>
+            <br>
+        </div>
+        <div class="changeling">
+            <div class="sheet-customroll">
+                <span class="subheader">Kith Ability</span><br>
+                <textarea rows="2" cols="40" name="attr_kithability"></textarea>
+            </div>
+            <br>
+            <div class="sheet-customroll">
+                <span class="subheader">Seeming Curse</span><br>
+                <textarea rows="2" cols="40" name="attr_seemingcurse"></textarea>
+            </div>
+            <br>
+            <div class="sheet-customroll">
+                <span class="subheader">Pledges</span><br>
+                <textarea rows="2" cols="40" name="attr_pledges"></textarea>
+            </div>
+            <br>
+            <div class="sheet-customroll">
+                <span class="subheader">Mantle</span><br>
+                <textarea rows="2" cols="40" name="attr_mantle"></textarea>
+            </div>
+            <br>
+        </div>
+        <div class="geist">
+            <div class="sheet-customroll">
+                <span class="subheader">Keys</span><br>
+                <textarea rows="2" cols="40" name="attr_keys"></textarea>
+            </div>
+            <br>
+            <div class="sheet-customroll">
+                <span class="subheader">Krewe</span><br>
+                <textarea rows="2" cols="40" name="attr_krewe"></textarea>
+            </div>
+            <br>
+        </div>
+        <div class="mummy">
+            <div class="sheet-customroll">
+                <span class="subheader">Utterances</span><br>
+                <textarea rows="2" cols="40" name="attr_utterances"></textarea>
+            </div>
+            <br>
+            <div class="sheet-customroll">
+                <span class="subheader">Vessels</span><br>
+                <textarea rows="2" cols="40" name="attr_vessels"></textarea>
+            </div>
+            <br>
+            <div class="sheet-customroll">
+                <span class="subheader">Witnesses</span><br>
+                <textarea rows="2" cols="40" name="attr_witnesses"></textarea>
+            </div>
+            <br>
+        </div>
+        <fieldset class="repeating_inforight">
+            <div class="sheet-customroll">
+                <input type="text" class="title" name="attr_titleright"/><br>
+                <textarea rows="2" cols="40" name="attr_textright"></textarea>
+            </div>
+            <br>
+        </fieldset>
+    </div>
+    
+<!-- PAGE 4 -->
+<div class="expandedsheet3" style="width: 100%;">
+
+    <div class="leftcolumn">
+        <div class="sheet-customroll">
+            <span class="subheader">Allies</span><br>
+            <textarea rows="2" cols="40" name="attr_allies"></textarea>
+        </div>
+        <br>
+        <div class="sheet-customroll">
+            <span class="subheader">Contacts</span><br>
+            <textarea rows="2" cols="40" name="attr_contacts"></textarea>
+        </div>
+        <br>
+        <div class="sheet-customroll">
+            <span class="subheader">Fame</span><br>
+            <textarea rows="2" cols="40" name="attr_fame"></textarea>
+        </div>
+        <br>
+        <div class="sheet-customroll">
+            <span class="subheader">Banes</span><br>
+            <textarea rows="2" cols="40" name="attr_banes"></textarea>
+        </div>
+        <br>
+
         <div class="vampire">
             <div class="sheet-customroll">
                 <span class="subheader">Herd</span><br>
@@ -1564,24 +1962,6 @@
             <textarea rows="2" cols="40" name="attr_derangments"></textarea>
         </div>
         <br>
-        <div class="sheet-customroll">
-            <span class="subheader">Equipment(Owned)</span><br>
-            <textarea rows="2" cols="40" name="attr_equipment"></textarea>
-        </div>
-        <br>
-        <div class="sheet-customroll">
-            <span class="subheader mortal">Residence</span>
-            <span class="subheader vampire">Haven</span>
-            <span class="subheader werewolf">Totem</span>
-            <span class="subheader mage">Sanctum</span>
-            <span class="subheader mummy">Tomb</span>
-            <span class="subheader promethean">Lair</span>
-            <span class="subheader changeling">Hollow</span>
-            <span class="subheader geist">Haunt</span>
-            <br>
-            <textarea rows="2" cols="40" name="attr_residence"></textarea>
-        </div>
-        <br>
         <div class="vampire">
             <div class="sheet-customroll">
                 <span class="subheader">Status</span><br>
@@ -1704,8 +2084,6 @@
             <br>
         </fieldset>
     </div>
-    
-</div>
 
 <!-- HIDDEN FIELDS AND FORMULAS -->
 <input type="hidden" name="attr_0" value="0" />

@@ -68,7 +68,10 @@ input.sheet-page2:checked ~ div.sheet-skills,
 input.sheet-page2:checked ~ div.sheet-othertraits,
 input.sheet-page3:checked ~ div.sheet-3colrow,
 input.sheet-page3:checked ~ div.sheet-skills,
-input.sheet-page3:checked ~ div.sheet-othertraits{
+input.sheet-page3:checked ~ div.sheet-othertraits,
+input.sheet-page4:checked ~ div.sheet-3colrow,
+input.sheet-page4:checked ~ div.sheet-skills,
+input.sheet-page4:checked ~ div.sheet-othertraits{
 	display: none !important;
 }
 
@@ -81,6 +84,10 @@ input.sheet-page2:checked ~ div.sheet-expandedsheet {
 }
 
 input.sheet-page3:checked ~ div.sheet-expandedsheet2 {
+	display: inline-block;
+}
+
+input.sheet-page4:checked ~ div.sheet-expandedsheet3 {
 	display: inline-block;
 }
 
@@ -149,7 +156,8 @@ input.sheet-mummysheet:checked ~ .sheet-background-image::after {
 
 input.sheet-settingssheet:checked ~ .sheet-background-image::after,
 input.sheet-page2:checked ~ .sheet-background-image::after,
-input.sheet-page3:checked ~ .sheet-background-image::after{
+input.sheet-page3:checked ~ .sheet-background-image::after,
+input.sheet-page4:checked ~ .sheet-background-image::after{
 	background-size: 100%;
 }
 
@@ -180,7 +188,8 @@ input.sheet-settingssheet:checked ~ div.sheet-header.sheet-settings {
 input.sheet-settingssheet:checked + span.sheet-attr,
 input.sheet-page1:checked + span.sheet-attr,
 input.sheet-page2:checked + span.sheet-attr,
-input.sheet-page3:checked + span.sheet-attr{
+input.sheet-page3:checked + span.sheet-attr,
+input.sheet-page4:checked + span.sheet-attr{
 	color: #2A2D80;
 	text-shadow: 0px 0px 10px black; 
 }
@@ -309,6 +318,7 @@ input.sheet-mummysheet:checked ~ div * input.sheet-weapon:checked + span + .shee
 
 .sheet-expandedsheet,
 .sheet-expandedsheet2,
+.sheet-expandedsheet3,
 .sheet-rolltemplates {
 	display: none; 
 }
@@ -553,6 +563,7 @@ input.sheet-opt:checked + span.sheet-opt
 
 /* Hide actual dot/checkbox */
 input[type="radio"].sheet-normal,
+input[type="radio"].sheet-humanity,
 input.sheet-weapon,
 input[type="checkbox"].sheet-normal
 {
@@ -592,12 +603,64 @@ input[type="checkbox"].sheet-normal + span::before,
 	background: radial-gradient(#f6f6f6, #dfdfdf);
 }
 
+input[type="radio"].sheet-humanity + span::after
+{
+	border: solid 1px #000000;
+	line-height: 11px;
+	text-align: center;
+	display: inline-block;
+	vertical-align: middle;
+	
+	-moz-box-shadow: 0 0 0px #000;
+	-webkit-box-shadow: 0 0 0px #000;
+	box-shadow: 0 0 0px #000;
+	
+	background: #000000;
+	background: -moz-radial-gradient(#f6f6f6, #dfdfdf);
+	background: -webkit-radial-gradient(#f6f6f6, #dfdfdf);
+	background: -ms-radial-gradient(#f6f6f6, #dfdfdf);
+	background: -o-radial-gradient(#f6f6f6, #dfdfdf);
+	background: radial-gradient(#f6f6f6, #dfdfdf);
+}
+
 /* Styles unique to fake dot (checked or left of checked) */
 input[type="radio"].sheet-normal + span::before,
 input.sheet-weapon:checked + span::before,
 .sheet-permadot::before
 {
 	content: "•";
+	width: 10px;
+	height: 10px;
+	font-size: 41.9px;
+	font-family: "Arial";
+	text-indent: -2px;
+	font-weight: normal;
+	
+	-webkit-font-smoothing: antialiased;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+
+input[type="radio"].sheet-humanity 
+{
+	content: "•";
+	width: 10px;
+	height: 10px;
+	font-size: 41.9px;
+	font-family: "Arial";
+	text-indent: -2px;
+	font-weight: normal;
+	
+	-webkit-font-smoothing: antialiased;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+
+input[type="radio"].sheet-humanity + span::after
+{
+	content: "";
 	width: 10px;
 	height: 10px;
 	font-size: 41.9px;
@@ -666,6 +729,16 @@ input[type="checkbox"].sheet-normal:checked + span::before
 input[type="radio"].sheet-normal:checked ~ input[type="radio"] + span::before
 {    
 	content: "";
+}
+
+input[type="radio"].sheet-humanity:checked ~ input[type="radio"] + span::after
+{    
+	content: "•";
+}
+
+input[type="radio"].sheet-humanity:checked + span::after
+{    
+	content: "•";
 }
 
 input.sheet-used+span::before
@@ -1102,7 +1175,7 @@ input[type=number] {
 	border: none;
 	cursor: default;
 	box-shadow: none;
-	height: 18px;  
+	height: 16px;  
 }
 
 .sheet-settings input[type=number] {
@@ -1277,7 +1350,8 @@ input[type=number] {
 }
 
 .sheet-expandedsheet textarea,
-.sheet-expandedsheet2 textarea {
+.sheet-expandedsheet2 textarea,
+.sheet-expandedsheet3 textarea {
 	resize:vertical;
 	width: calc(100% - 10px);
 	margin-top: 10px;
@@ -1327,6 +1401,16 @@ input[type=text].sheet-title {
 }
 
 .sheet-expandedsheet2 .sheet-subheader {
+	width: 300px;
+	font-size: 1.4em;
+	font-weight: bolder;
+}
+
+.sheet-expandedsheet3 {
+	text-align: center;
+}
+
+.sheet-expandedsheet3 .sheet-subheader {
 	width: 300px;
 	font-size: 1.4em;
 	font-weight: bolder;
