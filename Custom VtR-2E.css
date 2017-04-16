@@ -1480,6 +1480,16 @@ input[type=number] {
 	margin-left: 2%;
 }
 
+.sheet-leftcolumnOLD {
+    display: inline-block;   
+    margin-right: 10px;
+}
+
+.sheet-rightcolumnOLD {
+    display: inline-block;
+    float: right;
+}
+
 td.sheet-vitae {
 	padding: 0px;
 }
