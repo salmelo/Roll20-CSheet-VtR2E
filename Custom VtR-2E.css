@@ -405,9 +405,9 @@ input.sheet-mummysheet:checked ~ div * input.sheet-weapon:checked + span + .shee
 	margin-left: 0px;
 }
 
-.charsheet input[type=text] {
+.charsheet input[type="text"] {
 	display: inline-block;
-	width: 165px;
+	width: 220px;
 	font-family: "Courier";
 	font-size: 12px;
 	height: 20px;
@@ -1214,10 +1214,38 @@ input[type=number] {
 	margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
+.sheet-toptext input[type="text"] {
+	font-family: "Times New Roman";
+	font-size: 14px;
+	text-align: left;
+	vertical-align: bottom;
+	height: 25px;
+}
+
+.sheet-nametext input[type="text"] {
+	font-style: bold;
+	font-weight: bolder;
+	font-size: 16px;
+	height: 25px;
+}
+
+.sheet-narrowtext input[type="text"] {
+	font-family: "Helvetica Narrow", "Arial Narrow", Arial;
+	font-size: 11px;
+	padding: 0.1px;
+	height: 14px;
+	width: 95%;
+}
+
 .sheet-rowtext {
 	text-align: center;
 	vertical-align: top;
+}
 
+.sheet-rowtext input[type="text"] {
+	padding: 0.1px;
+	height: 14px;
+	width: 95%;
 }
 
 .sheet-humanitynumber,
@@ -1232,66 +1260,16 @@ input[type=number] {
 	padding: 0.1px;
 }
 
-.sheet-humanitytext input[type=text] {
+.sheet-humanitytext input[type="text"] {
 	padding: 0.1px;
-	width: 95%;
+	width: 90%;
+	font-family: "Helvetica Narrow", "Arial Narrow", Arial;
+	font-stretch: ultra-condensed;
 	text-align: left;
 	height: 14px;
 }
 
-.sheet-rowtext input[type="text"] {
-	padding: 0.1px;
-	height: 14px;
-	width: 95%;
-}
 
-.sheet-borderA1 {
-	border: 5px double red;
-}
-
-.sheet-borderA2 {
-	border: 4px solid red;
-}
-
-.sheet-borderA3 {
-	border: 4px dashed red;
-}
-
-.sheet-borderA4 {
-	border: 4px dotted red;
-}
-
-.sheet-borderB1 {
-	border: 3px double blue;
-}
-
-.sheet-borderB2 {
-	border: 2px solid blue;
-}
-
-.sheet-borderB3 {
-	border: 2px dashed blue;
-}
-
-.sheet-borderB4 {
-	border: 2px dotted blue;
-}
-
-.sheet-borderC1 {
-	border: 1px double green;
-}
-
-.sheet-borderC2 {
-	border: 1px solid green;
-}
-
-.sheet-borderC3 {
-	border: 1px dashed green;
-}
-
-.sheet-borderC4 {
-	border: 1px dotted green;
-}
 
 .sheet-forcerowheight {
 	height: 20px;
@@ -1303,33 +1281,33 @@ input[type=number] {
 	vertical-align: top;
 }
 
-.sheet-merittable input[type=text] {
+.sheet-merittable input[type="text"] {
 	padding: 0.1px;
 	height: 14px;
 	width: 135px;
 }
 
-.sheet-weapontable input[type=text].sheet-weaponstat {
+.sheet-weapontable input[type="text"].sheet-weaponstat {
 	width: 17px;
 	text-align: center;
 }
 
-.sheet-weapontable input[type=text].sheet-weaponstat.sheet-name {
+.sheet-weapontable input[type="text"].sheet-weaponstat.sheet-name {
 	width: 130px;
 	text-align: left;
 }
 
-.sheet-weapontable input[type=text].sheet-weaponstat.sheet-range {
+.sheet-weapontable input[type="text"].sheet-weaponstat.sheet-range {
 	width: 80px;
 	text-align: center;
 }
 
-.sheet-weapontable input[type=text].sheet-weaponstat.sheet-mag {
+.sheet-weapontable input[type="text"].sheet-weaponstat.sheet-mag {
 	width: 30px;
 	text-align: center;
 }
 
-.sheet-weapontable input[type=text].sheet-weaponstat.sheet-desc {
+.sheet-weapontable input[type="text"].sheet-weaponstat.sheet-desc {
 	width: 135px;
 	text-align: left;
 }
@@ -1503,7 +1481,7 @@ tr.sheet-vitae {
 	width: 12px;
 }
 
-input[type=text].sheet-title {
+input[type="text"].sheet-title {
 	text-align: center; 
 	width: 300px;
 	font-size: 1.4em;

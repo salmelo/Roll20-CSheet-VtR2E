@@ -5,13 +5,13 @@
 <input type="radio" class="attr sheetoptions settingssheet" name="attr_pagenumber" title="Settings" value="settings" />
 <span class="sheet-attr">Settings</span>
 
-<input type="radio" class="attr sheetoptions pages page1" name="attr_pagenumber" title="Page1" value="1" />
+<input type="radio" class="attr sheetoptions pages page1" name="attr_pagenumber" title="Page1" value="1" checked="checked" />
 <span class="sheet-attr">Page 1</span>
 
 <input type="radio" class="attr sheetoptions pages page2" name="attr_pagenumber" title="Page2" value="2" />
 <span class="sheet-attr">Page 2</span>
 
-<input type="radio" class="attr sheetoptions pages page3" name="attr_pagenumber" title="Page3" value="3" checked="checked" />
+<input type="radio" class="attr sheetoptions pages page3" name="attr_pagenumber" title="Page3" value="3" />
 <span class="sheet-attr">Page 3</span>
 
 <input type="radio" class="attr sheetoptions pages page4" name="attr_pagenumber" title="Page4" value="4" />
@@ -56,7 +56,7 @@
 <input type="radio" class="attr sheetoptions gametype werewolfsheet 2nd" name="attr_sheettype" title="Werewolf" value="werewolf2" style="width: 163px;"/>
 <span class="sheet-attr" style="margin-left: -167px;">Werewolf</span>
 
-<br><span class="spacer"></span><br><span class="spacer"></span><br>
+<br><span class="spacer"></span>
 
 <div class="background-image"></div>
 
@@ -134,11 +134,11 @@
     <span class="subheader">Customizable Attribute Settings</span>
     <br>
     <span>Defense Trait: </span><select name="attr_defense_base" />
-        <option value="(((@{dexterity} + @{wits}) - abs(@{dexterity} - @{wits})) / 2)" checked="checked">Lowest</option>
+        <option value="(((@{dexterity} + @{wits}) - abs(@{dexterity} - @{wits})) / 2)">Lowest</option>
         <option value="(((@{dexterity} + @{wits}) + abs(@{dexterity} - @{wits})) / 2)">Highest</option>
         <option value="@{wits}">Wits</option>
         <option value="@{dexterity}">Dexterity</option>
-        <option value="((((@{dexterity} + @{wits}) - abs(@{dexterity} - @{wits})) / 2) + (((@{Athletics} + 0) + abs(@{Athletics} - 0)) / 2))">Lowest + Athletics</option>
+        <option value="((((@{dexterity} + @{wits}) - abs(@{dexterity} - @{wits})) / 2) + (((@{Athletics} + 0) + abs(@{Athletics} - 0)) / 2))" checked="checked">Lowest + Athletics</option>
     </select><br><br>
     <span>Base Size: </span><input type="number" name="attr_base_size" value="5" />
     <input type="checkbox" class="sheet-normal" name="attr_giant" value="1" /><span></span><span> Giant</span>
@@ -154,13 +154,13 @@
 
 <!-- CHARACTER INFO FIELDS -->
 <div class="3colrow">
-    <table>
+    <table class="toptext">
         <tbody>
             <tr>
                 <td>
                     Name:
                 </td>
-                <td>
+                <td class="nametext">
                     <input type="text" name="attr_character_name">
                 </td>
                 <td>
@@ -182,7 +182,7 @@
                     <span class="geist">Archtype</span>
                     <span class="mummy">Decree:</span>
                 </td>
-                <td>
+                <td class="nametext">
                     <input type="text" name="attr_Chronicle">
                 </td>
             </tr>
@@ -632,7 +632,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="">
+                            <td class="narrowtext">
                                 <table>
                                     <tr class=" forcerowheight">
                                         <td><input type="text" name="attr_merit1_name" /></td>
@@ -709,13 +709,13 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="rowtext " ><input type="text" name="attr_specializations1"  style="width:95%;" /></td>
+                                        <td class="narrowtext" ><input type="text" name="attr_specializations1"  style="width:95%;" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="rowtext " colspan="2"><input type="text" name="attr_specializations2"  style="width:95%;" /></td>
+                                        <td class="narrowtext " colspan="2"><input type="text" name="attr_specializations2"  style="width:95%;" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="rowtext " colspan="2"><input type="text" name="attr_specializations3"  style="width:95%;" /></td>
+                                        <td class="narrowtext " colspan="2"><input type="text" name="attr_specializations3"  style="width:95%;" /></td>
                                     </tr>
                                 </table>                                
                             </td>
@@ -1038,13 +1038,13 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="rowtext " ><input type="text" style="width:95%;"  name="attr_aspiration1" /></td>
+                                        <td class="narrowtext" ><input type="text" style="width:95%;"  name="attr_aspiration1" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="rowtext "><input type="text" style="width:95%;"  name="attr_aspiration2" /></td>
+                                        <td class="narrowtext"><input type="text" style="width:95%;"  name="attr_aspiration2" /></td>
                                     </tr>
                                     <tr>
-                                        <td class="rowtext "><input type="text" style="width:95%;" name="attr_aspiration3" /></td>
+                                        <td class="narrowtext"><input type="text" style="width:95%;" name="attr_aspiration3" /></td>
                                     </tr>
                                 </table>
                             </td>
@@ -1259,6 +1259,78 @@
                         <tr>
                             <td class="spacer"></td>
                         </tr>
+                                                <tr>
+                            <td>
+                                <table class="mortal">
+                                    <tr>
+                                        <td class="subheader">
+                                            Conditions
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="rowtext"><input type="text" name="attr_conditions1" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="rowtext"><input type="text" name="attr_conditions2" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="rowtext"><input type="text" name="attr_conditions3" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="rowtext"><input type="text" name="attr_conditions4" /></td>
+                                    </tr>                                  
+                                    <tr>
+                                        <td class="spacer"></td>
+                                    </tr>
+                                </table>
+                                <table class="potency vampire werewolf mage promethean changeling geist mummy">
+                                    <tr>
+                                        <td class="subheader">
+                                            <input type="checkbox" class="sheet-attr" name="attr_potency_flag" value="@{potency}" />
+                                            <span class="sheet-attr vampire" style="font-size: 1em;">Blood Potency</span>
+                                            <span class="sheet-attr werewolf" style="font-size: 1em;">Primal Urge</span>
+                                            <span class="sheet-attr mage" style="font-size: 1em;">Gnosis</span>
+                                            <span class="sheet-attr promethean" style="font-size: 1em;">Azoth</span>
+                                            <span class="sheet-attr changeling" style="font-size: 1em;">Wyrd</span>
+                                            <span class="sheet-attr geist" style="font-size: 1em;">Psyche</span>
+                                            <span class="sheet-attr mummy" style="font-size: 1em;">Sekhem</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="radio" class="sheet-normal" name="attr_potency" value="1" checked="checked" /><span></span><input type="radio" class="sheet-normal" name="attr_potency" value="2" /><span></span><input type="radio" class="sheet-normal" name="attr_potency" value="3" /><span></span><input type="radio" class="sheet-normal" name="attr_potency" value="4" /><span></span><input type="radio" class="sheet-normal" name="attr_potency" value="5" /><span></span><input type="radio" class="sheet-normal" name="attr_potency" value="6" /><span></span><input type="radio" class="sheet-normal" name="attr_potency" value="7" /><span></span><input type="radio" class="sheet-normal" name="attr_potency" value="8" /><span></span><input type="radio" class="sheet-normal" name="attr_potency" value="9" /><span></span><input type="radio" class="sheet-normal" name="attr_potency" value="10" /><span></span>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <td class="subheader">
+                                            <span class="vampire">Vitae</span>
+                                            <span class="werewolf">Essence</span>
+                                            <span class="mage">Mana</span>
+                                            <span class="promethean">Pyros</span>
+                                            <span class="changeling">Glamour</span>
+                                            <span class="geist">Plasm</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="vitae">
+                                        <td class="vitae">
+                                            <span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box1"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box2"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box3"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box4"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box5"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box6"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box7"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box8"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box9"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box10"><span></span></span></span>
+                                        </td>
+                                    </tr>
+                                    <tr class="vitae">
+                                        <td class="vitae">
+                                            <span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box11"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box12"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box13"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box14"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box15"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box16"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box17"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box18"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box19"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box20"><span></span></span></span>
+                                        </td>
+                                    </tr>
+                                    <tr class="vitae">
+                                        <td class="vitae">
+                                            <div class="geist">
+                                                <span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box21"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box22"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box23"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box24"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box25"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box26"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box27"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box28"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box29"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box30"><span></span></span></span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>  
                         <tr>
                             <td class="subheader">
                                 <span class="mortal 1st">Morality</span>
@@ -1349,81 +1421,7 @@
                                 </table>
                             </td>
                         </tr>
-                        <tr>
-                            <td>
-                                <table class="mortal">
-                                    <tr>
-                                        <td class="subheader">
-                                            Conditions
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="rowtext"><input type="text" name="attr_conditions1" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="rowtext"><input type="text" name="attr_conditions2" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="rowtext"><input type="text" name="attr_conditions3" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="rowtext"><input type="text" name="attr_conditions4" /></td>
-                                    </tr>                                  
-                                    <tr>
-                                        <td class="spacer"></td>
-                                    </tr>
-                                </table>
-                                <table class="potency vampire werewolf mage promethean changeling geist mummy">
-                                    <tr>
-                                        <td class="subheader">
-                                            <input type="checkbox" class="sheet-attr" name="attr_potency_flag" value="@{potency}" />
-                                            <span class="sheet-attr vampire" style="font-size: 1em;">Blood Potency</span>
-                                            <span class="sheet-attr werewolf" style="font-size: 1em;">Primal Urge</span>
-                                            <span class="sheet-attr mage" style="font-size: 1em;">Gnosis</span>
-                                            <span class="sheet-attr promethean" style="font-size: 1em;">Azoth</span>
-                                            <span class="sheet-attr changeling" style="font-size: 1em;">Wyrd</span>
-                                            <span class="sheet-attr geist" style="font-size: 1em;">Psyche</span>
-                                            <span class="sheet-attr mummy" style="font-size: 1em;">Sekhem</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="radio" class="sheet-normal" name="attr_potency" value="1" checked="checked" /><span></span><input type="radio" class="sheet-normal" name="attr_potency" value="2" /><span></span><input type="radio" class="sheet-normal" name="attr_potency" value="3" /><span></span><input type="radio" class="sheet-normal" name="attr_potency" value="4" /><span></span><input type="radio" class="sheet-normal" name="attr_potency" value="5" /><span></span><input type="radio" class="sheet-normal" name="attr_potency" value="6" /><span></span><input type="radio" class="sheet-normal" name="attr_potency" value="7" /><span></span><input type="radio" class="sheet-normal" name="attr_potency" value="8" /><span></span><input type="radio" class="sheet-normal" name="attr_potency" value="9" /><span></span><input type="radio" class="sheet-normal" name="attr_potency" value="10" /><span></span>
-                                        </td>
-                                    </tr>
-                                     <tr>
-                                        <td class="subheader">
-                                            <span class="vampire">Vitae</span>
-                                            <span class="werewolf">Essence</span>
-                                            <span class="mage">Mana</span>
-                                            <span class="promethean">Pyros</span>
-                                            <span class="changeling">Glamour</span>
-                                            <span class="geist">Plasm</span>
-                                        </td>
-                                    </tr>
-                                    <tr class="vitae">
-                                        <td class="vitae">
-                                            <span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box1"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box2"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box3"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box4"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box5"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box6"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box7"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box8"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box9"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box10"><span></span></span></span>
-                                        </td>
-                                    </tr>
-                                    <tr class="vitae">
-                                        <td class="vitae">
-                                            <span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box11"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box12"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box13"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box14"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box15"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box16"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box17"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box18"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box19"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box20"><span></span></span></span>
-                                        </td>
-                                    </tr>
-                                    <tr class="vitae">
-                                        <td class="vitae">
-                                            <div class="geist">
-                                                <span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box21"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box22"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box23"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box24"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box25"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box26"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box27"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box28"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box29"><span></span></span></span><span class="healthboxcontainer"><input type="checkbox" class="sheet-normal" name="attr_vitae_box30"><span></span></span></span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="el_spacer"></td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>    
+  
                         <tr>
                             <td class="derived">Size:<input type="number" name="attr_size" value="@{base_size}+@{giant}+@{small_framed}" disabled="disabled" />&nbsp;Speed:<input type="number" name="attr_speed" value="@{species_factor}+@{dexterity}+@{strength}+@{speed_penalty}+@{fleet_of_foot}" disabled="disabled" /><span class="vampire">/<input type="number" name="attr_speedwcelerity" value="((1+@{Celerity})*(@{speed}))" disabled="disabled" /></span>
                             </td>        
@@ -1969,17 +1967,17 @@
 </div>
 <div class="expandedsheet3" style="width: 100%;">
     <div class="sheet-customroll largeTextArea">
-        <textarea rows="4" cols="80" name="attr_history"></textarea>
+        <textarea rows="6" cols="80" name="attr_history"></textarea>
     </div>
     <br>
 </div>
 <div class="expandedsheet3" style="width: 100%;">
-    <span class="expandedHeader">DESCRIPTION</span>
+    <span class="expandedHeader">XP LOG</span>
     <div class="el_spacer"></div>
 </div>
 <div class="expandedsheet3" style="width: 100%;">
     <div class="sheet-customroll largeTextArea">
-        <textarea rows="4" cols="80" name="attr_description"></textarea>
+        <textarea rows="4" cols="80" name="attr_xplog"></textarea>
     </div>   
     <br> 
 
