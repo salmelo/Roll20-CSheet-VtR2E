@@ -56,7 +56,7 @@
 <input type="radio" class="attr sheetoptions gametype werewolfsheet 2nd" name="attr_sheettype" title="Werewolf" value="werewolf2" style="width: 163px;"/>
 <span class="sheet-attr" style="margin-left: -167px;">Werewolf</span>
 
-<br><span class="spacer"></span>
+<br><div class="settings-spacer" style="height: 40px; display: none;"></div>
 
 <div class="background-image"></div>
 
@@ -138,7 +138,7 @@
         <option value="(((@{dexterity} + @{wits}) + abs(@{dexterity} - @{wits})) / 2)">Highest</option>
         <option value="@{wits}">Wits</option>
         <option value="@{dexterity}">Dexterity</option>
-        <option value="((((@{dexterity} + @{wits}) - abs(@{dexterity} - @{wits})) / 2) + (((@{Athletics} + 0) + abs(@{Athletics} - 0)) / 2))" checked="checked">Lowest + Athletics</option>
+        <option value="((((@{dexterity} + @{wits}) - abs(@{dexterity} - @{wits})) / 2) + (((@{Athletics} + 0) + abs(@{Athletics} - 0)) / 2))" selected="selected">Lowest + Athletics</option>
     </select><br><br>
     <span>Base Size: </span><input type="number" name="attr_base_size" value="5" />
     <input type="checkbox" class="sheet-normal" name="attr_giant" value="1" /><span></span><span> Giant</span>
@@ -149,6 +149,7 @@
     <span>Fleet of Foot: </span><input type="number" name="attr_fleet_of_foot" value="0" /><br><br>
     <span>Fast Reflexes: </span><input type="number" name="attr_fast_reflexes" value="0" />
 </div>    
+<div class="settings-spacer" style="height: 80px; display: none;"></div>
 
 <!-- <div class="el_spacer" style="height: 30px;"></div> -->
 
@@ -1460,7 +1461,7 @@
     <div class="leftcolumnOLD" style="width: 447px;">
 
         <fieldset class="repeating_custom1">
-            <div class="sheet-customroll">
+            <div class="sheet-customroll sansseriftextfield">
                 Roll: <input type="text" class="name" name="attr_customRollName1"> 
                 Action: <select name="attr_customRollAction1">
                         <option value="Reflexive">Reflexive</option>
@@ -1485,7 +1486,7 @@
     <div class="rightcolumnOLD" style="width: 447px;">
         
         <fieldset class="repeating_custom2">
-            <div class="sheet-customroll">
+            <div class="sheet-customroll sansseriftextfield">
                 Roll: <input type="text" class="name" name="attr_customRollName2"> 
                 Action: <select name="attr_customRollAction2">
                         <option value="Reflexive">Reflexive</option>
@@ -1510,7 +1511,7 @@
 </div>
 
 <!-- PAGE 3 -->
-<div class="expandedsheet2" style="width: 100%;">
+<div class="expandedsheet2 seriftextfield" style="width: 100%;">
     <div class="leftcolumn">
         <div class="vampire 1st forcedwidth">
             <div class="sheet-customroll">
@@ -1700,205 +1701,20 @@
 <br/>
 <div class="expandedsheet2" style="width: 100%;"> 
     <div class="leftcolumn">
-        <div class="forcedwidth">
-            <div class="sheet-customroll">
-                <span class="subheader">Allies</span><br>
-                <textarea rows="2" cols="40" name="attr_allies"></textarea>
-            </div>
-            <br>
-            <div class="sheet-customroll">
-                <span class="subheader">Contacts</span><br>
-                <textarea rows="2" cols="40" name="attr_contacts"></textarea>
-            </div>
-            <br>
-            <div class="sheet-customroll">
-                <span class="subheader">Mentor</span><br>
-                <textarea rows="2" cols="40" name="attr_mentor"></textarea>
-            </div>
-            <br>  
-        </div>
-        <div class="vampire forcedwidth"  style="width:100%">
-            <div class="sheet-customroll">
-                <span class="subheader">Touchstones</span><br>
-                <textarea rows="2" cols="40" name="attr_touchstones"></textarea>
-            </div>
-            <br>
-        </div>
-        <div class="werewolf forcedwidth">
-            <div class="sheet-customroll">
-                <span class="subheader">Fetishes</span><br>
-                <textarea rows="2" cols="40" name="attr_fetishes"></textarea>
-            </div>
-            <br>
-        </div>
-        <div class="mage forcedwidth">
-            <div class="sheet-customroll">
-                <span class="subheader">Dedicated Magical Tools</span><br>
-                <textarea rows="2" cols="40" name="attr_dedicatedmagicaltools"></textarea>
-            </div>
-            <br>
-            <div class="sheet-customroll">
-                <span class="subheader">Familiar</span><br>
-                <textarea rows="2" cols="40" name="attr_familiar"></textarea>
-            </div>
-            <br>
-        </div>
-        <div class="promethean forcedwidth">
-            <div class="sheet-customroll">
-                <span class="subheader">Bestowment</span><br>
-                <textarea rows="2" cols="40" name="attr_bestowment"></textarea>
-            </div>
-            <br>
-            <div class="sheet-customroll">
-                <span class="subheader">Trait Affinities</span><br>
-                <textarea rows="2" cols="40" name="attr_traitaffinities"></textarea>
-            </div>
-            <br>
-        </div>
-        <div class="changeling forcedwidth">
-            <div class="sheet-customroll">
-                <span class="subheader">Entitlement</span><br>
-                <textarea rows="2" cols="40" name="attr_entitlement"></textarea>
-            </div>
-            <br>
-            <div class="sheet-customroll">
-                <span class="subheader">Seeming Blessing</span><br>
-                <textarea rows="2" cols="40" name="attr_seemingblessing"></textarea>
-            </div>
-            <br>
-        </div>
-        <div class="geist forcedwidth">
-            <div class="sheet-customroll">
-                <span class="subheader">Keystone Memento</span><br>
-                <textarea rows="2" cols="40" name="attr_ketystonemomento"></textarea>
-            </div>
-            <br>
-        </div>
         <fieldset class="repeating_infoleft forcedwidth">
-            <div class="sheet-customroll">
-                <span class="subheader">&nbsp;&nbsp;Other: </span><input type="text" class="title" name="attr_titleleft" style="text-align:left;"/><br>
+            <div class="sheet-customroll seriftextfield">
+                <span class="subheader"></span><input type="text" class="title" name="attr_titleleft"/><br>
+                <div class="el_spacer"></div>
                 <textarea rows="2" cols="40" name="attr_textleft"></textarea>
             </div>
             <br>
         </fieldset>
     </div>
     <div class="rightcolumn">
-        <div class="forcedwidth">
-            <div class="sheet-customroll">
-                <span class="subheader">Resources</span><br>
-                <textarea rows="2" cols="40" name="attr_resources"></textarea>
-            </div>
-            <br>
-            <div class="sheet-customroll">
-                <span class="subheader">Retainer</span><br>
-                <textarea rows="2" cols="40" name="attr_retainer"></textarea>
-            </div>
-            <br>
-        </div>
-        <div class="mortal forcedwidth">
-            <div class="sheet-customroll">
-                <span class="subheader">Fame</span><br>
-                <textarea rows="2" cols="40" name="attr_fame"></textarea>
-            </div>
-            <br>
-        </div>        
-        <div class="vampire forcedwidth">
-            <div class="sheet-customroll">
-                <span class="subheader">Status</span><br>
-                <textarea rows="2" cols="40" name="attr_status"></textarea>
-            </div>
-            <br>
-            <div class="sheet-customroll">
-                <span class="subheader">Herd</span><br>
-                <textarea rows="2" cols="40" name="attr_herd"></textarea>
-            </div>
-            <br>
-        </div>
-        <div class="werewolf forcedwidth">
-            <div class="sheet-customroll">
-                <span class="subheader">Status</span><br>
-                <textarea rows="2" cols="40" name="attr_status"></textarea>
-            </div>
-            <br>
-            <div class="sheet-customroll">
-                <span class="subheader">&nbsp;&nbsp;Other: </span><input type="text" class="title" name="attr_titleExpMerit" style="text-align:left;"/><br>
-                <textarea rows="2" cols="40" name="attr_textExpMerit"></textarea>
-            </div>
-            <br>
-        </div>        
-        <div class="mage forcedwidth">
-            <div class="sheet-customroll">
-                <span class="subheader">Thrall</span><br>
-                <textarea rows="2" cols="40" name="attr_thrall"></textarea>
-            </div>
-            <br>        
-            <div class="sheet-customroll">
-                <span class="subheader">Enchanted Items</span><br>
-                <textarea rows="2" cols="40" name="attr_enchanteditems"></textarea>
-            </div>
-            <br>
-            <div class="sheet-customroll">
-                <span class="subheader">Paradox Marks</span><br>
-                <textarea rows="2" cols="40" name="attr_paradoxmarks"></textarea>
-            </div>
-            <br>
-        </div>
-        <div class="promethean forcedwidth">
-            <div class="sheet-customroll">
-                <span class="subheader">Disfigurements</span><br>
-                <textarea rows="2" cols="40" name="attr_disfigurements"></textarea>
-            </div>
-            <br>
-            <div class="sheet-customroll">
-                <span class="subheader">Language</span><br>
-                <textarea rows="2" cols="40" name="attr_language"></textarea>
-            </div>
-            <br>
-            <div class="sheet-customroll">
-                <span class="subheader">&nbsp;&nbsp;Other: </span><input type="text" class="title" name="attr_titleExpMerit" style="text-align:left;"/><br>
-                <textarea rows="2" cols="40" name="attr_textExpMerit"></textarea>
-            </div>
-            <br>
-        </div>
-        <div class="changeling forcedwidth">
-            <div class="sheet-customroll">
-                <span class="subheader">Kith Ability</span><br>
-                <textarea rows="2" cols="40" name="attr_kithability"></textarea>
-            </div>
-            <br>
-            <div class="sheet-customroll">
-                <span class="subheader">Seeming Curse</span><br>
-                <textarea rows="2" cols="40" name="attr_seemingcurse"></textarea>
-            </div>
-            <br>
-            <div class="sheet-customroll">
-                <span class="subheader">&nbsp;&nbsp;Other: </span><input type="text" class="title" name="attr_titleExpMerit" style="text-align:left;"/><br>
-                <textarea rows="2" cols="40" name="attr_textExpMerit"></textarea>
-            </div>
-            <br>
-        </div>
-        <div class="geist forcedwidth">
-            <div class="sheet-customroll">
-                <span class="subheader">Keys</span><br>
-                <textarea rows="2" cols="40" name="attr_keys"></textarea>
-            </div>
-            <br>
-            <div class="sheet-customroll">
-                <span class="subheader">&nbsp;&nbsp;Other: </span><input type="text" class="title" name="attr_titleExpMerit" style="text-align:left;"/><br>
-                <textarea rows="2" cols="40" name="attr_textExpMerit"></textarea>
-            </div>
-            <br>
-        </div>
-        <div class="mummy forcedwidth">
-            <div class="sheet-customroll forcedwidth">
-                <span class="subheader">&nbsp;&nbsp;Other: </span><input type="text" class="title" name="attr_titleExpMerit" style="text-align:left;"/><br>
-                <textarea rows="2" cols="40" name="attr_textExpMerit"></textarea>
-            </div>
-            <br>
-        </div>
         <fieldset class="repeating_inforight forcedwidth">
-            <div class="sheet-customroll">
-                <span class="subheader">&nbsp;&nbsp;Other: </span><input type="text" class="title" name="attr_titleright" style="text-align:left;"/><br>
+            <div class="sheet-customroll seriftextfield">
+                <span class="subheader"></span><input type="text" class="title" name="attr_titleright"/><br>
+                <div class="el_spacer"></div>
                 <textarea rows="2" cols="40" name="attr_textright"></textarea>
             </div>
             <br>
@@ -1913,14 +1729,14 @@
 </div>
 <div class="expandedsheet3" style="width: 100%;">
 
-    <div class="leftcolumn">
+    <div class="leftcolumn seriftextfield">
         <div class="sheet-customroll">
             <span class="subheader">Gear(Carried)</span><br>
             <textarea rows="2" cols="40" name="attr_gear"></textarea>
         </div>
         <br>
     </div>
-    <div class="rightcolumn">
+    <div class="rightcolumn seriftextfield">
         <div class="sheet-customroll">
             <span class="subheader">Equipment(Owned)</span><br>
             <textarea rows="2" cols="40" name="attr_equipment"></textarea>
@@ -1928,12 +1744,12 @@
         <br>    
     </div>        
 </div>
-<div class="expandedsheet3" style="width: 100%;">
+<div class="expandedsheet3 seriftextfield" style="width: 100%;">
     <div>
         <span class="expandedHeader mortal forcedwidth">RESIDENCE</span>
     </div>
     <div>
-        <span class="expandedHeader vampire forcedwidth">TERRITORY &amp; HAVEN</span>
+        <span class="expandedHeader vampire forcedwidth">HAVEN &amp; TERRITORY</span>
     </div>
     <div>
         <span class="expandedHeader werewolf forcedwidth">TOTEM</span>
@@ -1955,7 +1771,7 @@
     </div>
     <div class="el_spacer"></div>
 </div>
-<div class="expandedsheet3" style="width: 100%;">
+<div class="expandedsheet3 seriftextfield" style="width: 100%;">
     <div class="sheet-customroll">
         <textarea rows="2" cols="80" name="attr_residence"></textarea>
     </div>
@@ -1965,7 +1781,7 @@
     <span class="expandedHeader">HISTORY</span>
     <div class="el_spacer"></div>
 </div>
-<div class="expandedsheet3" style="width: 100%;">
+<div class="expandedsheet3 seriftextfield" style="width: 100%;">
     <div class="sheet-customroll largeTextArea">
         <textarea rows="6" cols="80" name="attr_history"></textarea>
     </div>

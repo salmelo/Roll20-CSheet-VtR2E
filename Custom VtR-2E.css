@@ -1433,6 +1433,17 @@ input[type=number] {
 	margin-bottom: 15px;
 }
 
+.sheet-seriftextfield textarea {
+    font-family: "Times New Roman", Serif;
+	font-size: 12px;
+}
+
+.sheet-sansseriftextfield textarea,
+.sheet-sansseriftextfield input[type="text"] {
+    font-family: "Helvetica Narrow", "Arial Narrow", Arial;
+	font-size: 11px;
+}
+
 .sheet-2colholder {
 	text-align: center;
 }
