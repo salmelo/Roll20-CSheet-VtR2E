@@ -434,7 +434,7 @@ input.sheet-huntersheet:checked ~ div * input.sheet-weapon:checked + span + .she
 }
 
 .charsheet .sheet-diceroller .sheet-rollcontainer {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/New%20World%20of%20Darkness%20Official/die.png') no-repeat center;
+    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness%20by%20Roll20/images/die.png') no-repeat center;
 	background-size: contain;
 	border-bottom: solid 1px #000000;
 }
